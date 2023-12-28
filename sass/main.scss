@@ -115,19 +115,24 @@ a {
     width: 100%;
     height: auto;
 
-    .title-restaurant {
-        color: var(--Black, #101010);
-        font-family: Shrikhand;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+    h3.title-restaurant {
+        padding-left: 16px;
+
+        .title-restaurant {
+            color: var(--Black, #101010);
+            font-family: Shrikhand;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
 
     }
 
-    .heart {
-        padding-left: 89px;
+    span.heart {
+        padding-left: 234px;
     }
+
 
 }
 
@@ -163,11 +168,18 @@ section.entrees {
         background: var(--White, #FFF);
         box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
 
-        h3,
-        p {
-            margin: 13px;
+        h3.card-title {
+            padding-left: 15px;
         }
 
+        h3.title-restaurant {
+            margin-left: 19px;
+        }
+
+    }
+
+    .content-box {
+        padding: 10px;
     }
 
     .card-plate .price {
@@ -237,6 +249,12 @@ section.desserts {
 button.commander {
     margin: auto;
     display: flex;
+    color: #FFF;
+    font-family: 'Roboto';
+    padding-left: 47px;
+    align-content: center;
+    font-size: 16px;
+    text-align: center;
     width: 186px;
     height: 50px;
     flex-shrink: 0;
