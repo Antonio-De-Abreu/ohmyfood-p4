@@ -27,7 +27,6 @@ a {
   font-family: "Roboto";
   font-size: 16px;
   width: 100%;
-  height: 50px;
   border-top: 0.5px solid #353535;
   color: #353535;
   background-color: #EAEAEA;
@@ -40,7 +39,9 @@ a {
 
 /* Section Title */
 .headline {
-  background-color: #eaeaea;
+  position: relative;
+  padding-top: 1px;
+  background: var(--Background, #F6F6F6);
   width: 100%;
   color: #000;
   text-align: center;
@@ -97,7 +98,10 @@ a {
   width: 100%;
   height: auto;
 }
-.title .title-restaurant {
+.title h3.title-restaurant {
+  padding-left: 16px;
+}
+.title h3.title-restaurant .title-restaurant {
   color: var(--Black, #101010);
   font-family: Shrikhand;
   font-size: 28px;
@@ -105,8 +109,8 @@ a {
   font-weight: 400;
   line-height: normal;
 }
-.title .heart {
-  padding-left: 89px;
+.title span.heart {
+  padding-left: 234px;
 }
 
 menu {
@@ -140,15 +144,85 @@ section.entrees .card-plate {
   background: var(--White, #FFF);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-section.entrees .card-plate h3,
-section.entrees .card-plate p {
-  margin: 13px;
+section.entrees .card-plate h3.card-title {
+  padding-left: 15px;
+}
+section.entrees .card-plate h3.title-restaurant {
+  margin-left: 19px;
+}
+section.entrees .content-box {
+  padding: 10px;
 }
 section.entrees .card-plate .price {
   margin-left: 320px;
   text-align: right;
   margin-right: 37px;
   margin-bottom: 20px;
+}
+
+section.plats {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+section.plats .card-plate {
+  padding-left: 16px;
+  margin-bottom: 10px;
+  border-radius: 15.043px;
+  background: var(--White, #FFF);
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+}
+section.plats .card-plate h3,
+section.plats .card-plate p {
+  margin: 13px;
+}
+section.plats .card-plate .price {
+  margin-left: 320px;
+  text-align: right;
+  margin-right: 37px;
+  margin-bottom: 20px;
+}
+
+section.desserts {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+section.desserts .card-plate {
+  padding-left: 16px;
+  margin-bottom: 10px;
+  border-radius: 15.043px;
+  background: var(--White, #FFF);
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+}
+section.desserts .card-plate h3,
+section.desserts .card-plate p {
+  margin: 13px;
+}
+section.desserts .card-plate .price {
+  margin-left: 320px;
+  text-align: right;
+  margin-right: 37px;
+  margin-bottom: 20px;
+}
+
+button.commander {
+  margin: auto;
+  display: flex;
+  color: #FFF;
+  font-family: "Roboto";
+  padding-left: 47px;
+  align-content: center;
+  font-size: 16px;
+  text-align: center;
+  width: 186px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 .fonctionnement {
@@ -221,6 +295,7 @@ section.entrees .card-plate .price {
   background-color: #fff;
   position: relative;
   width: 100%;
+  margin-top: 20px;
   border-radius: 20px 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -231,12 +306,22 @@ section.entrees .card-plate .price {
   right: 15px;
   padding: 5px 10px;
 }
-.restaurants .cards-container .card p.citie-restaurant {
-  text-align: left;
-  padding: 10px;
+.restaurants .cards-container .card .cards-texts {
+  width: 100%;
+  padding: 1px 21px 9px;
+  line-height: 15px;
 }
-.restaurants .cards-container .card .span.heart {
-  margin-left: 313px;
+.restaurants .cards-container .card .cards-texts .title-restaurant {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000000;
+}
+.restaurants .cards-container .card .cards-texts p.citie-restaurant {
+  text-align: left;
+}
+.restaurants .cards-container .card .cards-texts p.citie-restaurant i.fa-regular.fa-heart.fa-lg {
+  padding-left: 325px;
 }
 
 footer {
