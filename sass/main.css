@@ -1,5 +1,6 @@
 body {
   color: #000;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -15,6 +16,10 @@ header .logo {
   line-height: 43.74px;
   font-style: italic;
 }
+header .content-box-arow a {
+  position: absolute;
+  left: 15px;
+}
 
 a {
   text-decoration: none;
@@ -22,6 +27,8 @@ a {
 }
 
 .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   font-family: "Roboto";
@@ -30,7 +37,9 @@ a {
   border-top: 0.5px solid #353535;
   color: #353535;
   background-color: #EAEAEA;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .location i.locate.fas.fa-map-marker-alt {
   padding-top: 22px;
@@ -75,7 +84,8 @@ a {
   border-radius: 41px;
   background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
   /* Shadow/Button */
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .headline a {
   color: #000;
@@ -113,9 +123,13 @@ a {
   padding-left: 234px;
 }
 
-menu {
-  padding: 2%;
+.menu-container {
+  position: relative;
+  bottom: 30px;
+  padding: 15px;
   background-color: #F6F6F6;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .title-menu-section {
@@ -132,17 +146,23 @@ menu {
 }
 
 section.entrees {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 12px;
 }
 section.entrees .card-plate {
-  padding-left: 16px;
+  padding-left: 14px;
   margin-bottom: 10px;
   border-radius: 15.043px;
   background: var(--White, #FFF);
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 section.entrees .card-plate h3.card-title {
   padding-left: 15px;
@@ -150,8 +170,12 @@ section.entrees .card-plate h3.card-title {
 section.entrees .card-plate h3.title-restaurant {
   margin-left: 19px;
 }
-section.entrees .content-box {
-  padding: 10px;
+section.entrees .card-plate i.fa-regular.fa-heart.fa-sm {
+  position: absolute;
+  right: 33px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 section.entrees .card-plate .price {
   margin-left: 320px;
@@ -161,9 +185,14 @@ section.entrees .card-plate .price {
 }
 
 section.plats {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 12px;
 }
 section.plats .card-plate {
@@ -171,7 +200,8 @@ section.plats .card-plate {
   margin-bottom: 10px;
   border-radius: 15.043px;
   background: var(--White, #FFF);
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 section.plats .card-plate h3,
 section.plats .card-plate p {
@@ -185,21 +215,33 @@ section.plats .card-plate .price {
 }
 
 section.desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 12px;
 }
 section.desserts .card-plate {
-  padding-left: 16px;
+  padding-left: 10px;
   margin-bottom: 10px;
   border-radius: 15.043px;
   background: var(--White, #FFF);
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
 section.desserts .card-plate h3,
 section.desserts .card-plate p {
   margin: 13px;
+}
+section.desserts .card-plate i.fa-regular.fa-heart.fa-lg {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  /* bottom: 1px; */
 }
 section.desserts .card-plate .price {
   margin-left: 320px;
@@ -210,19 +252,28 @@ section.desserts .card-plate .price {
 
 button.commander {
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #FFF;
   font-family: "Roboto";
   padding-left: 47px;
-  align-content: center;
+  margin-top: 30px;
+  -ms-flex-line-pack: center;
+      align-content: center;
   font-size: 16px;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 186px;
   height: 50px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border-radius: 25px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 .fonctionnement {
@@ -251,7 +302,8 @@ button.commander {
   border-radius: 20px;
   background: #f6f6f6;
   /* Shadow/Instructions */
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement .selection i {
   margin-right: 10px;
@@ -269,8 +321,13 @@ button.commander {
 .restaurants {
   background-color: #F6F6F6;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .restaurants h2 {
   color: #000;
@@ -297,7 +354,8 @@ button.commander {
   width: 100%;
   margin-top: 20px;
   border-radius: 20px 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .restaurants .cards-container .card .badge {
   position: absolute;
@@ -328,7 +386,10 @@ footer {
   width: 100%;
   font-family: "Roboto";
   font-size: 18px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #353535;
   color: #FFF;
   text-decoration: none;

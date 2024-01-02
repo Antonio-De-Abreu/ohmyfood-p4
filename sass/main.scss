@@ -2,6 +2,7 @@
 
 body {
     color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 // Header
@@ -18,6 +19,13 @@ header {
         font-size: 30px;
         line-height: 43.74px;
         font-style: italic;
+    }
+
+    .content-box-arow {
+        a {
+            position: absolute;
+            left: 15px;
+        }
     }
 }
 
@@ -137,11 +145,15 @@ a {
 
 }
 
-
-menu {
-    padding: 2%;
+.menu-container {
+    position: relative;
+    bottom: 30px;
+    padding: 15px;
     background-color: #F6F6F6;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
+
 
 .title-menu-section {
     color: #000;
@@ -163,7 +175,7 @@ section.entrees {
     gap: 12px;
 
     .card-plate {
-        padding-left: 16px;
+        padding-left: 14px;
         margin-bottom: 10px;
         border-radius: 15.043px;
         background: var(--White, #FFF);
@@ -177,10 +189,13 @@ section.entrees {
             margin-left: 19px;
         }
 
-    }
+        i.fa-regular.fa-heart.fa-sm {
+            position: absolute;
+            right: 33px;
+            align-items: end;
+        }
 
-    .content-box {
-        padding: 10px;
+
     }
 
     .card-plate .price {
@@ -226,7 +241,7 @@ section.desserts {
     gap: 12px;
 
     .card-plate {
-        padding-left: 16px;
+        padding-left: 10px;
         margin-bottom: 10px;
         border-radius: 15.043px;
         background: var(--White, #FFF);
@@ -235,6 +250,13 @@ section.desserts {
         h3,
         p {
             margin: 13px;
+        }
+
+        i.fa-regular.fa-heart.fa-lg {
+            position: absolute;
+            right: 20px;
+            top: 40px;
+            /* bottom: 1px; */
         }
 
     }
@@ -253,9 +275,11 @@ button.commander {
     color: #FFF;
     font-family: 'Roboto';
     padding-left: 47px;
+    margin-top: 30px;
     align-content: center;
     font-size: 16px;
     text-align: center;
+    align-items: center;
     width: 186px;
     height: 50px;
     flex-shrink: 0;
@@ -375,7 +399,9 @@ button.commander {
                     i.fa-regular.fa-heart.fa-lg {
                         padding-left: 325px;
                     }
+
                 }
+
             }
 
 
