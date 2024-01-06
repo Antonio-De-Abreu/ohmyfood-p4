@@ -104,23 +104,13 @@ a {
      object-fit: cover;
 }
 
-.title {
-  width: 100%;
-  height: auto;
-}
-.title h3.title-restaurant {
-  padding-left: 16px;
-}
-.title h3.title-restaurant .title-restaurant {
+.title h2.title-restaurant {
   color: var(--Black, #101010);
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-.title span.heart {
-  padding-left: 234px;
 }
 
 .menu-container {
@@ -146,9 +136,6 @@ a {
 }
 
 section.entrees {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -157,37 +144,26 @@ section.entrees {
   gap: 12px;
 }
 section.entrees .card-plate {
-  padding-left: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 8px;
   border-radius: 15.043px;
   background: var(--White, #FFF);
   -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-section.entrees .card-plate h3.card-title {
+section.entrees .card-plate .description h3 {
+  padding-left: 15px;
+  margin: auto;
+}
+section.entrees .card-plate .description p {
   padding-left: 15px;
 }
-section.entrees .card-plate h3.title-restaurant {
-  margin-left: 19px;
-}
-section.entrees .card-plate i.fa-regular.fa-heart.fa-sm {
-  position: absolute;
-  right: 33px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-}
-section.entrees .card-plate .price {
-  margin-left: 320px;
+section.entrees .card-plate .description .price {
   text-align: right;
-  margin-right: 37px;
-  margin-bottom: 20px;
+  margin: 13px;
 }
 
 section.plats {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -196,22 +172,25 @@ section.plats {
   gap: 12px;
 }
 section.plats .card-plate {
-  padding-left: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 8px;
   border-radius: 15.043px;
   background: var(--White, #FFF);
   -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-section.plats .card-plate h3,
-section.plats .card-plate p {
-  margin: 13px;
+section.plats .card-plate .description {
+  margin: auto;
 }
-section.plats .card-plate .price {
-  margin-left: 320px;
+section.plats .card-plate .description h3 {
+  padding-left: 15px;
+}
+section.plats .card-plate .description p {
+  padding-left: 15px;
+}
+section.plats .card-plate .description .price {
   text-align: right;
-  margin-right: 37px;
-  margin-bottom: 20px;
+  margin: 13px;
 }
 
 section.desserts {
@@ -233,21 +212,15 @@ section.desserts .card-plate {
   -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-section.desserts .card-plate h3,
-section.desserts .card-plate p {
-  margin: 13px;
+section.desserts .card-plate h3 {
+  padding-left: 15px;
 }
-section.desserts .card-plate i.fa-regular.fa-heart.fa-lg {
-  position: absolute;
-  right: 20px;
-  top: 40px;
-  /* bottom: 1px; */
+section.desserts .card-plate p {
+  padding-left: 15px;
 }
 section.desserts .card-plate .price {
-  margin-left: 320px;
   text-align: right;
-  margin-right: 37px;
-  margin-bottom: 20px;
+  margin: 13px;
 }
 
 button.commander {
