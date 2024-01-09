@@ -1,4 +1,5 @@
 body {
+  margin: 0px;
   color: #000;
   font-family: "Roboto", sans-serif;
 }
@@ -114,9 +115,7 @@ a {
 }
 
 .heart {
-  position: absolute;
-  right: 56px;
-  top: 51px;
+  /* display: inline-block; */
 }
 
 i.fa-regular.fa-heart.fa-lg {
@@ -133,6 +132,10 @@ i.fa-regular.fa-heart.fa-lg {
   background-color: #F6F6F6;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+
+h2.title-section {
+  margin: 11px;
 }
 
 .title-menu-section {
@@ -154,7 +157,6 @@ i.fa-regular.fa-heart.fa-lg {
 }
 
 section.entrees {
-  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -190,6 +192,11 @@ section.entrees .card-plate p {
 section.entrees .card-plate .price {
   position: relative;
   text-align: right;
+  left: 42px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   bottom: 30px;
 }
 
@@ -230,6 +237,11 @@ section.plats .card-plate p {
 section.plats .card-plate .price {
   position: relative;
   text-align: right;
+  left: 42px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   bottom: 30px;
 }
 
@@ -389,7 +401,7 @@ button.commander {
 }
 .restaurants .cards-container .card .cards-texts {
   width: 100%;
-  padding: 1px 21px 9px;
+  padding: 0px 21px 9px;
   line-height: 15px;
 }
 .restaurants .cards-container .card .cards-texts .title-restaurant {
@@ -399,7 +411,7 @@ button.commander {
   color: #000000;
 }
 .restaurants .cards-container .card .cards-texts p.citie-restaurant {
-  text-align: left;
+  /* text-align: left; */
 }
 .restaurants .cards-container .card .cards-texts p.citie-restaurant i.fa-regular.fa-heart.fa-lg {
   padding-left: 325px;
@@ -433,4 +445,131 @@ ul {
 a {
   text-decoration: none;
   font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  header .logo {
+    color: #101010;
+    text-align: center;
+    font-size: 37px;
+    line-height: 43.74px;
+    font-style: italic;
+  }
+  /* Section Title */
+  .headline {
+    position: relative;
+    padding-top: 1px;
+    background: var(--Background, #F6F6F6);
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .headline h2 {
+    font-weight: bolder;
+    font-size: 40px;
+    font-style: normal;
+  }
+  .headline .sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #353535;
+    text-align: center;
+  }
+  .headline .button-research {
+    color: var(--White, #fff);
+    margin: 76px;
+    width: 222px;
+    text-align: center;
+    padding: 6px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    border-radius: 41px;
+    background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
+    /* Shadow/Button */
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  .headline a {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    padding-top: 23px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+  }
+  .fonctionnement {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 17px;
+  }
+  .fonctionnement .box {
+    margin: auto;
+    width: 100%;
+    height: 73px;
+  }
+  .fonctionnement .element {
+    position: relative;
+  }
+  .fonctionnement .element .circle {
+    background-color: violet;
+    position: absolute;
+    left: -13px;
+    top: 14px;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 230px;
+    gap: 20px;
+    padding: 17px;
+  }
+  .restaurants {
+    background-color: #F6F6F6;
+    width: 100%;
+    padding-bottom: 150px;
+  }
+  .cards-container .card .cards-texts {
+    width: 100%;
+    padding: 0px 21px 9px;
+    line-height: 15px;
+  }
+  footer {
+    width: 100%;
+    font-family: "Roboto";
+    font-size: 18px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #353535;
+    color: #FFF;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  h2.title-footer {
+    font-family: "Shrikhand";
+    font-size: 28px;
+    padding: 10px;
+  }
+  ul {
+    list-style: none;
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */
