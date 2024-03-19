@@ -481,7 +481,8 @@ h3.cardsMenuList__title {
             right: -60px;
             width: 60px;
             height: 100%;
-            background: rgba(153, 226, 208, 1);
+            background: #9356DC;
+            ;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
 
@@ -825,10 +826,10 @@ footer {
             font-weight: 500;
             line-height: 18.75px;
             border-radius: 41px;
-            background: var(--Button-Gradient,
-                    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
+            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
             /* Shadow/Button */
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 15px 0px #00000059;
         }
 
         a {
@@ -847,8 +848,8 @@ footer {
 
     .heart-anim span.heart {
         position: absolute;
-        top: 30px;
-        right: 500px;
+        top: 32px;
+        right: 497px;
         -webkit-transition-property: -webkit-transform;
         transition-property: -webkit-transform;
         transition-property: transform;
@@ -875,8 +876,9 @@ footer {
             position: relative;
 
             .circle {
-                background-color: violet;
+                background-color: #9356DC;
                 position: absolute;
+                color: #fff;
                 left: -13px;
                 top: 14px;
                 padding: 5px 10px;
@@ -1012,6 +1014,7 @@ footer {
     .title-footer {
         font-family: "Shrikhand";
         position: absolute;
+        list-style-type: none;
         margin: 8px 20px;
     }
 
