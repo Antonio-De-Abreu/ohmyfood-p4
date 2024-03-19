@@ -585,8 +585,8 @@ button.commander {
   position: relative;
 }
 .fonctionnement .element .circle {
-  background-color: violet;
   position: absolute;
+  background-color: #99E2D0;
   left: -13px;
   top: 14px;
   padding: 5px 10px;
@@ -833,7 +833,7 @@ footer ul {
     position: relative;
   }
   .fonctionnement .element .circle {
-    background-color: #9356DC;
+    background-color: #99E2D0;
     position: absolute;
     color: #fff;
     left: -13px;
