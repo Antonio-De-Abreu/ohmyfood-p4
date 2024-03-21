@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-button{
+button {
     border: none;
 }
 
@@ -272,7 +272,8 @@ main.containerRestaurant {
         font-family: 'Shrikhand';
         font-size: 28px;
         text-align: justify;
-        margin-left: 122px;
+        margin-left: -20px;
+        padding-top: 35px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -284,7 +285,7 @@ ul.cardsMenuList__content {
     padding: 24px;
 }
 
-h3.cardsMenuList__title {
+.cardsMenuList__title {
     position: relative;
     margin-left: 52px;
     top: 32px;
@@ -355,7 +356,7 @@ h3.cardsMenuList__title {
 
     span.heart {
         position: absolute;
-        bottom: 40px;
+        top: 13px;
         right: 15px;
         transition-property: transform;
         transition-duration: 1000ms;
@@ -371,11 +372,12 @@ h3.cardsMenuList__title {
     }
 }
 
-@keyframes anim-heart{
-    0%{
+@keyframes anim-heart {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
@@ -509,7 +511,9 @@ h3.cardsMenuList__title {
                 animation: slide 300ms;
                 animation-fill-mode: both;
             }
-            h3, p{
+
+            h3,
+            p {
                 width: 70%; // On réduit la taille du texte
                 text-wrap: nowrap; // On coupe le retour à la ligne
                 overflow: hidden; // On cache ce qui sort de la largeur
@@ -582,7 +586,8 @@ button.commander {
         position: relative;
 
         .circle {
-            background-color: violet;
+            background-color: #9356DC;
+            color: #fff;
             position: absolute;
             left: -13px;
             top: 14px;
@@ -658,6 +663,8 @@ button.commander {
 
     .cards-container {
         padding: 15px;
+        margin-top: auto;
+        margin-bottom: 80px;
 
         img {
             width: 100%;
@@ -720,8 +727,8 @@ button.commander {
 
                     span.heart {
                         position: absolute;
-                        bottom: 40px;
-                        right: 15px;
+                        top: 271px;
+                        right: 50px;
                         transition-property: transform;
                         transition-duration: 1000ms;
                         font-size: 22px;
@@ -749,13 +756,18 @@ footer {
     padding: 20px;
     background-color: #353535;
     color: #FFF;
+    list-style-type: none;
 
     h2.title-footer {
         font-family: "Shrikhand";
+        position: absolute;
+        left: 0px;
     }
 
     ul {
-        list-style-type: none;
+        display: flex;
+        position: relative;
+        flex-direction: column;
         padding-left: 0px;
     }
 }
@@ -819,8 +831,8 @@ footer {
             font-weight: 500;
             line-height: 18.75px;
             border-radius: 41px;
-            background: var(--Button-Gradient,
-                    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
+            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
             /* Shadow/Button */
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         }
@@ -841,8 +853,8 @@ footer {
 
     .heart-anim span.heart {
         position: absolute;
-        bottom: 40px;
-        right: 15px;
+        top: 67px;
+        right: 538px;
         -webkit-transition-property: -webkit-transform;
         transition-property: -webkit-transform;
         transition-property: transform;
@@ -869,7 +881,8 @@ footer {
             position: relative;
 
             .circle {
-                background-color: violet;
+                background-color: #9356DC;
+                color: #fff;
                 position: absolute;
                 left: -13px;
                 top: 14px;
@@ -884,7 +897,7 @@ footer {
         position: relative;
         background-color: #F6F6F6;
         width: 70%;
-        height: 1398px;
+        height: 1440px;
         margin: auto;
         padding-top: 1px;
         top: -40px;
@@ -899,7 +912,7 @@ footer {
 
     .restaurantName h2 {
         position: relative;
-        padding-left: 436px;
+        padding-left: 432px;
         color: var(--Black, #101010);
         font-family: "Shrikhand";
         font-size: 28px;
@@ -913,22 +926,9 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-        padding: 17px;
+        margin-bottom: 90px;
     }
 
-    footer {
-        display: flex;
-        justify-content: flex-end;
-
-        .title-footer {
-            margin: 8px 20px;
-        }
-
-        & ul {
-            display: flex;
-            gap: 20px;
-        }
-    }
 
 }
 
@@ -949,6 +949,9 @@ i.far.fa-heart {
         color: #000;
         background-color: #F6F6F6;
         font-family: "Roboto";
+        position: relative;
+        margin-left: 21px;
+        top: 32px;
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -999,14 +1002,19 @@ button.commander {
 }
 
 footer {
-    padding: 20px;
+    width: 100%;
+    position: absolute;
+    margin-top: -57px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
     background-color: #353535;
     color: #FFF;
 
-    .title-footer {
+    h2.title-footer {
         font-family: "Shrikhand";
-        position: absolute;
-        margin: 8px 20px;
+        position: relative;
+        left: 1023px;
     }
 
     ul {
@@ -1015,7 +1023,14 @@ footer {
         flex-direction: row;
         gap: 62px;
         position: relative;
-        right: 300;
-        padding-right: 300px;
+        padding-right: 440px;
+
+        i.fa-solid.fa-utensils {
+            padding-right: 5px;
+        }
+
+        i.fa-solid.fa-handshake-angle {
+            padding-right: 5px;
+        }
     }
 }
