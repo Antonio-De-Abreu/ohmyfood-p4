@@ -227,61 +227,46 @@ a {
 }
 
 main.containerRestaurant {
-  background-color: #F6F6F6;
-  width: 100%;
-  height: 1395px;
-  margin: auto;
-  padding-top: 1px;
-  top: -54px;
-  line-height: normal;
-  border-radius: 30.043px 30.043px 0 0;
-  -webkit-border-radius: 30.043px 30.043px 0 0;
-  -moz-border-radius: 30.043px 30.043px 0 0;
-  -ms-border-radius: 30.043px 30.043px 0 0;
-  -o-border-radius: 30.043px 30.043px 0 0;
-}
-
-.restaurantName h2 {
-  color: var(--Black, #101010);
-  font-family: "Shrikhand";
-  font-size: 28px;
-  text-align: justify;
-  margin-left: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-main.containerRestaurant {
   position: relative;
   background-color: #F6F6F6;
   width: 100%;
-  height: 1362px;
+  height: 1333px;
   margin: auto;
   padding-top: 1px;
   top: -54px;
-  line-height: normal;
-  border-radius: 30.043px 30.043px 0 0;
-  -webkit-border-radius: 30.043px 30.043px 0 0;
-  -moz-border-radius: 30.043px 30.043px 0 0;
-  -ms-border-radius: 30.043px 30.043px 0 0;
-  -o-border-radius: 30.043px 30.043px 0 0;
   margin-top: inherit;
   padding: 0px 0px 0px 0px;
   margin-bottom: 15px;
   line-height: normal;
-  border-radius: 15.043px;
+  border-radius: 40px 40px 0 0;
 }
-main.containerRestaurant .restaurantName h2 {
+main.containerRestaurant h2 .title-restaurant {
   color: var(--Black, #101010);
   font-family: "Shrikhand";
+  position: relative;
   font-size: 28px;
   text-align: justify;
-  margin-left: -20px;
-  padding-top: 35px;
+  margin-left: -11px;
+  padding-top: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.cardsMenuList .cardsMenuList__title {
+  color: #000;
+  background-color: #F6F6F6;
+  font-family: "Roboto";
+  position: relative;
+  margin-left: -22px;
+  top: 32px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #99E2D0;
+  width: 40px;
 }
 
 ul.cardsMenuList__content {
@@ -347,7 +332,7 @@ ul.cardsMenuList__content {
 }
 .heart-anim span.heart {
   position: absolute;
-  bottom: 40px;
+  top: 21px;
   right: 15px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
@@ -366,8 +351,8 @@ ul.cardsMenuList__content {
 }
 .heart-anim span.heart {
   position: absolute;
-  top: 13px;
-  right: 15px;
+  top: 25px;
+  right: 86px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -451,14 +436,11 @@ ul.cardsMenuList__content {
   border-bottom: 1px solid #99E2D0;
   width: 40px;
 }
-.cardsMenuList ul.cardsMenuList__title {
-  list-style-type: none;
-}
 .cardsMenuList .card-plate {
-  width: 100%;
+  width: 130%;
   overflow: hidden;
   position: relative;
-  margin: 11px;
+  margin-left: -33px;
   margin-bottom: 23px;
   line-height: normal;
   border-radius: 15px;
@@ -750,26 +732,16 @@ button.commander {
 }
 
 footer {
-  padding: 20px;
+  position: relative;
+  font-family: "Roboto";
+  bottom: 72px;
+  padding: 10px;
   background-color: #353535;
   color: #FFF;
-  list-style-type: none;
 }
-footer h2.title-footer {
-  font-family: "Shrikhand";
+footer .title-footer {
   position: absolute;
-  left: 0px;
-}
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 0px;
+  margin: -4px -4px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -840,7 +812,7 @@ footer ul {
   }
   .heart-anim span.heart {
     position: absolute;
-    top: 67px;
+    top: 51px;
     right: 538px;
     -webkit-transition-property: -webkit-transform;
     transition-property: -webkit-transform;
@@ -877,7 +849,7 @@ footer ul {
     position: relative;
     background-color: #F6F6F6;
     width: 70%;
-    height: 1440px;
+    height: 1303px;
     margin: auto;
     padding-top: 1px;
     top: -40px;
@@ -888,9 +860,9 @@ footer ul {
     -ms-border-radius: 30.043px 30.043px 0 0;
     -o-border-radius: 30.043px 30.043px 0 0;
   }
-  .restaurantName h2 {
+  .restaurantName {
     position: relative;
-    padding-left: 432px;
+    padding-right: 20px;
     color: var(--Black, #101010);
     font-family: "Shrikhand";
     font-size: 28px;
@@ -921,7 +893,7 @@ i.far.fa-heart {
   background-color: #F6F6F6;
   font-family: "Roboto";
   position: relative;
-  margin-left: 21px;
+  margin-left: 83px;
   top: 32px;
   font-size: 16px;
   font-style: normal;
@@ -931,12 +903,26 @@ i.far.fa-heart {
   border-bottom: 1px solid #99E2D0;
   width: 40px;
 }
-.cardsMenuList ul {
+.cardsMenuList .card-plate {
+  width: 121%;
+  overflow: hidden;
+  position: relative;
+  right: 22px;
+  display: inline-block;
+  margin-bottom: 0px;
+  line-height: normal;
+  border-radius: 15px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+}
+
+ul {
   padding: 2px;
   display: inline;
   list-style: none;
 }
-.cardsMenuList ul li.listPlats {
+ul li.listPlats {
   width: auto;
   list-style-type: none;
   -webkit-box-orient: vertical;
@@ -972,6 +958,8 @@ button.commander {
 footer {
   width: 100%;
   position: absolute;
+  font-family: "Roboto";
+  font-size: 16px;
   margin-top: -57px;
   height: 80px;
   display: -webkit-box;
@@ -986,6 +974,7 @@ footer {
 footer h2.title-footer {
   font-family: "Shrikhand";
   position: relative;
+  font-size: 18px;
   left: 1023px;
 }
 footer ul {
@@ -993,11 +982,13 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 16px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 62px;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-top: 17px;
+  gap: 45px;
   position: relative;
   padding-right: 440px;
 }
