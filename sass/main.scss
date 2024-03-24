@@ -865,6 +865,7 @@ footer {
         position: absolute;
         top: 30px;
         right: 471px;
+        color: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%)); // Couleur dégradé
         -webkit-transition-property: -webkit-transform;
         transition-property: -webkit-transform;
         transition-property: transform;
