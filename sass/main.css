@@ -962,9 +962,6 @@ footer ul {
     background-clip: text;
     -webkit-background-clip: text;
   }
-  main.containerRestaurant a.btn {
-    display: none;
-  }
   .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
