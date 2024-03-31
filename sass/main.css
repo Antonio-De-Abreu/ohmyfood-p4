@@ -143,6 +143,7 @@ header .content-box-arow a {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -582,7 +583,8 @@ h3.cardsMenuList__title {
   padding-left: 47px;
   margin-top: 40px;
   margin-bottom: 129px;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 400;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -597,7 +599,8 @@ h3.cardsMenuList__title {
           box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
 }
 .btn:hover {
-  background: linear-gradient(0deg, rgba(233, 130, 130, 0.15) 0%, rgba(224, 217, 217, 0.712) 100%), linear-gradient(201deg, #cec6d8 -5.2%, #e2cadb 110.74%);
+  cursor: pointer;
+  background: linear-gradient(0deg, rgba(233, 130, 130, 0.15) 0%, rgba(224, 217, 217, 0.712) 100%), linear-gradient(201deg, #ac74f1 -5.2%, #f461c8 110.74%);
   -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
@@ -841,12 +844,13 @@ footer ul {
   }
   .headline a {
     color: #000;
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 16px;
     padding-top: 23px;
     font-style: normal;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
     text-align: center;
   }
   .heart-anim:hover .anim {
@@ -958,6 +962,9 @@ footer ul {
     background-clip: text;
     -webkit-background-clip: text;
   }
+  main.containerRestaurant a.btn {
+    display: none;
+  }
   .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1004,9 +1011,6 @@ footer ul {
     background-clip: text;
     -webkit-background-clip: text;
   }
-  .cards-container .button-commander {
-    display: none !important;
-  }
   footer {
     margin-top: -70px;
     display: -webkit-box;
@@ -1031,11 +1035,16 @@ footer ul {
     left: 651px;
     bottom: 40px;
   }
+  footer ul a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
   footer ul i.fa-solid.fa-handshake-angle {
-    margin-right: 6px;
+    margin-right: 2px;
   }
   footer ul i.fa-solid.fa-utensils {
-    margin-right: 7px;
+    margin-right: 2px;
   }
   i.far.fa-heart {
     -webkit-font-smoothing: antialiased;
