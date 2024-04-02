@@ -953,6 +953,7 @@ footer {
             color: var(--Black, #101010);
             font-family: "Shrikhand";
             font-size: 28px;
+            right: 162px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -1050,6 +1051,7 @@ footer {
         display: flex;
         padding: 20px;
         flex-direction: row-reverse;
+
         .title-footer {
             padding-top: 14px;
         }
@@ -1060,6 +1062,7 @@ footer {
             position: relative;
             list-style-type: none;
             text-align: start;
+
             a:hover {
                 cursor: pointer;
                 text-decoration: none;
