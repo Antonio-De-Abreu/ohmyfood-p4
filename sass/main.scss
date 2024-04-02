@@ -295,10 +295,9 @@ h3.cardsMenuList__title {
 // Apparition progressive
 
 .cardsMenuList {
-    animation: appear 7s;
+    opacity: 0;
+    animation: appear 3s;
     animation-fill-mode: both;
-    opacity: 1;
-    -webkit-animation: appear 7s;
 }
 
 .cardsMenuList.entrees {
@@ -381,6 +380,8 @@ h3.cardsMenuList__title {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    justify-content: center;
 }
 
 .title-menu-section {
@@ -758,9 +759,6 @@ h3.cardsMenuList__title {
 }
 
 footer {
-    position: relative;
-    display: flex;
-    flex-flow: column;
     list-style-type: none;
     background-color: #353535;
     color: #FFF;
@@ -952,7 +950,6 @@ footer {
 
         .restaurantName h2 {
             position: relative;
-            padding-left: 366px;
             color: var(--Black, #101010);
             font-family: "Shrikhand";
             font-size: 28px;
@@ -1050,13 +1047,11 @@ footer {
 
 
     footer {
-        margin-top: -70px;
         display: flex;
-        justify-content: flex-end;
-
+        padding: 20px;
+        flex-direction: row-reverse;
         .title-footer {
             padding-top: 14px;
-            left: 1515px;
         }
 
         & ul {
@@ -1065,9 +1060,6 @@ footer {
             position: relative;
             list-style-type: none;
             text-align: start;
-            left: 651px;
-            bottom: 40px;
-
             a:hover {
                 cursor: pointer;
                 text-decoration: none;

@@ -302,11 +302,11 @@ h3.cardsMenuList__title {
 }
 
 .cardsMenuList {
-  animation: appear 7s;
+  opacity: 0;
+  -webkit-animation: appear 3s;
+          animation: appear 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  opacity: 1;
-  -webkit-animation: appear 7s;
 }
 
 .cardsMenuList.entrees {
@@ -404,6 +404,12 @@ h3.cardsMenuList__title {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .title-menu-section {
@@ -758,14 +764,6 @@ h3.cardsMenuList__title {
 }
 
 footer {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
   list-style-type: none;
   background-color: #353535;
   color: #FFF;
@@ -928,7 +926,6 @@ footer ul {
   }
   main.containerRestaurant .restaurantName h2 {
     position: relative;
-    padding-left: 366px;
     color: var(--Black, #101010);
     font-family: "Shrikhand";
     font-size: 28px;
@@ -1009,17 +1006,17 @@ footer ul {
     -webkit-background-clip: text;
   }
   footer {
-    margin-top: -70px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    padding: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   footer .title-footer {
     padding-top: 14px;
-    left: 1515px;
   }
   footer ul {
     display: -webkit-box;
@@ -1029,8 +1026,6 @@ footer ul {
     position: relative;
     list-style-type: none;
     text-align: start;
-    left: 651px;
-    bottom: 40px;
   }
   footer ul a:hover {
     cursor: pointer;
