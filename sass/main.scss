@@ -246,7 +246,8 @@ main.containerRestaurant {
         color: var(--Black, #101010);
         font-family: "Shrikhand";
         font-size: 28px;
-        text-align: left;
+        position: relative;
+        margin-right: 177px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -376,12 +377,10 @@ h3.cardsMenuList__title {
     font-family: 'Shrikhand';
     font-size: 28px;
     text-align: center;
-    padding-left: 65px;
+    margin-left: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    display: flex;
-    justify-content: center;
 }
 
 .title-menu-section {
@@ -953,7 +952,7 @@ footer {
             color: var(--Black, #101010);
             font-family: "Shrikhand";
             font-size: 28px;
-            right: 85px;
+            right: -3px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -1077,7 +1076,7 @@ footer {
 
 
     footer {
-        height: 114px;
+        height: 90px;
         list-style-type: none;
         background-color: #353535;
         color: #FFF;
@@ -1088,7 +1087,8 @@ footer {
         flex-direction: row-reverse;
 
         .title-footer {
-            padding-top: 14px;
+            padding-top: 7px;
+            left: 54px;
         }
 
         & ul {
@@ -1138,7 +1138,7 @@ footer {
         font-family: "Roboto";
         font-size: 16px;
         position: relative;
-        margin-left: 21px;
+        margin-left: 26px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
