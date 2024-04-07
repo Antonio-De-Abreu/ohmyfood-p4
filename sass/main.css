@@ -217,8 +217,8 @@ a {
   border-radius: 41px;
   background: linear-gradient(193deg, #9356dc -11.4%, #ff79da 123.93%);
   /* Shadow/Button */
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
   -webkit-transition: background 300ms, -webkit-box-shadow 300ms;
   transition: background 300ms, -webkit-box-shadow 300ms;
   transition: background 300ms, box-shadow 300ms;
@@ -278,32 +278,24 @@ main.containerRestaurant .restaurantName h2 {
 
 .heart-anim span.heart {
   position: absolute;
-  top: 34px;
-  left: 550px;
+  bottom: 40px;
+  right: 15px;
+  transition-property: -webkit-transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
+  transition-duration: 1000ms;
   font-size: 22px;
 }
 .heart-anim span.heart :hover {
-  opacity: 1;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -5.2%, #ff79da 110.74%));
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+  background: linear-gradient(193deg, #9356dc -11.4%, #ff79da 123.93%);
 }
-.heart-anim span.heart :hover span.anim {
-  opacity: 0;
-  background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.heart-anim span.heart ul.cardsMenuList__content {
+
+ul.cardsMenuList__content {
   list-style-type: none;
   padding: 24px;
 }
-.heart-anim span.heart h3.cardsMenuList__title {
+
+h3.cardsMenuList__title {
   position: relative;
   margin-left: 52px;
   top: 32px;
@@ -318,25 +310,30 @@ main.containerRestaurant .restaurantName h2 {
   border-bottom: 1px solid #99E2D0;
   width: 40px;
 }
-.heart-anim span.heart .cardsMenuList {
+
+.cardsMenuList {
   opacity: 0;
   -webkit-animation: appear 3s;
           animation: appear 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.heart-anim span.heart .cardsMenuList.entrees {
+
+.cardsMenuList.entrees {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
-.heart-anim span.heart .cardsMenuList.plats {
+
+.cardsMenuList.plats {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-.heart-anim span.heart .cardsMenuList.desserts {
+
+.cardsMenuList.desserts {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
+
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -345,6 +342,7 @@ main.containerRestaurant .restaurantName h2 {
     opacity: 1;
   }
 }
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -353,7 +351,7 @@ main.containerRestaurant .restaurantName h2 {
     opacity: 1;
   }
 }
-.heart-anim span.heart .heart-anim span.heart {
+.heart-anim span.heart {
   position: absolute;
   bottom: 40px;
   right: 15px;
@@ -363,16 +361,17 @@ main.containerRestaurant .restaurantName h2 {
   transition-duration: 1000ms;
   font-size: 22px;
 }
-.heart-anim span.heart .heart-anim:hover .anim {
+
+.heart-anim:hover .anim {
   -webkit-animation: anim-heart 500ms;
           animation: anim-heart 500ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.heart-anim span.heart .heart-anim span.heart {
+.heart-anim span.heart {
   position: absolute;
-  bottom: 40px;
-  right: 15px;
+  top: 30px;
+  right: 122px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -381,13 +380,14 @@ main.containerRestaurant .restaurantName h2 {
           transition-duration: 1000ms;
   font-size: 22px;
 }
-.heart-anim span.heart .heart-anim span.anim {
+.heart-anim span.anim {
   opacity: 0;
   background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
+
 @-webkit-keyframes anim-heart {
   0% {
     opacity: 0;
@@ -396,6 +396,7 @@ main.containerRestaurant .restaurantName h2 {
     opacity: 1;
   }
 }
+
 @keyframes anim-heart {
   0% {
     opacity: 0;
@@ -404,7 +405,7 @@ main.containerRestaurant .restaurantName h2 {
     opacity: 1;
   }
 }
-.heart-anim span.heart .restaurantName {
+.restaurantName {
   color: #101010;
   font-family: "Shrikhand";
   font-size: 28px;
@@ -414,7 +415,8 @@ main.containerRestaurant .restaurantName h2 {
   font-weight: 400;
   line-height: normal;
 }
-.heart-anim span.heart .title-menu-section {
+
+.title-menu-section {
   padding-bottom: 5px;
   color: #000;
   left: 10px;
@@ -428,18 +430,19 @@ main.containerRestaurant .restaurantName h2 {
   border-bottom: 2px solid #99E2D0;
   width: 40px;
 }
-.heart-anim span.heart .title-menu-section i.fa-regular.fa-heart.fa-lg {
+.title-menu-section i.fa-regular.fa-heart.fa-lg {
   position: absolute;
   right: 20px;
   top: 54px;
 }
-.heart-anim span.heart .cardsMenuList {
+
+.cardsMenuList {
   display: block;
   max-width: 67%;
   padding-bottom: 0px;
   padding-right: 81px;
 }
-.heart-anim span.heart .cardsMenuList .card-plate {
+.cardsMenuList .card-plate {
   width: 150%;
   overflow: hidden;
   position: relative;
@@ -451,7 +454,7 @@ main.containerRestaurant .restaurantName h2 {
   -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-.heart-anim span.heart .cardsMenuList.cardsMenuList__title {
+.cardsMenuList.cardsMenuList__title {
   position: relative;
   margin-left: 28px;
   top: 32px;
@@ -466,11 +469,11 @@ main.containerRestaurant .restaurantName h2 {
   border-bottom: 1px solid #99E2D0;
   width: 40px;
 }
-.heart-anim span.heart .cardsMenuList ul.cardsMenuList__title {
+.cardsMenuList ul.cardsMenuList__title {
   list-style-type: none;
 }
-.heart-anim span.heart .cardsMenuList .card-plate {
-  width: 100%;
+.cardsMenuList .card-plate {
+  width: 123%;
   overflow: hidden;
   position: relative;
   margin: 11px;
@@ -481,27 +484,27 @@ main.containerRestaurant .restaurantName h2 {
   -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
 }
-.heart-anim span.heart .cardsMenuList .card-plate .descriptionPlat {
+.cardsMenuList .card-plate .descriptionPlat {
   padding: 15px;
 }
-.heart-anim span.heart .cardsMenuList .card-plate h3 {
+.cardsMenuList .card-plate h3 {
   margin: 0;
 }
-.heart-anim span.heart .cardsMenuList .card-plate p {
+.cardsMenuList .card-plate p {
   font-size: 15px;
   margin-bottom: 0px;
   margin-top: 5px;
 }
-.heart-anim span.heart .cardsMenuList .card-plate .btn {
+.cardsMenuList .card-plate .btn {
   padding-right: 24px;
 }
-.heart-anim span.heart .cardsMenuList .card-plate .price {
+.cardsMenuList .card-plate .price {
   position: absolute;
   padding-right: 24px;
   right: 5px;
   bottom: 21px;
 }
-.heart-anim span.heart .cardsMenuList .card-plate .circle {
+.cardsMenuList .card-plate .circle {
   position: absolute;
   top: 0;
   right: -60px;
@@ -511,11 +514,11 @@ main.containerRestaurant .restaurantName h2 {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.heart-anim span.heart .cardsMenuList .card-plate .circle i {
+.cardsMenuList .card-plate .circle i {
   padding: 29px 22px;
   color: #fff;
 }
-.heart-anim span.heart .cardsMenuList .card-plate:hover .price {
+.cardsMenuList .card-plate:hover .price {
   display: block;
   transform: translate(-70%, 0);
   -webkit-transition: -webkit-transform 300ms;
@@ -531,19 +534,20 @@ main.containerRestaurant .restaurantName h2 {
   -ms-transition: transform 300ms;
   -o-transition: transform 300ms;
 }
-.heart-anim span.heart .cardsMenuList .card-plate:hover .circle {
+.cardsMenuList .card-plate:hover .circle {
   -webkit-animation: slide 300ms;
           animation: slide 300ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.heart-anim span.heart .cardsMenuList .card-plate:hover h3,
-.heart-anim span.heart .cardsMenuList .card-plate:hover p {
+.cardsMenuList .card-plate:hover h3,
+.cardsMenuList .card-plate:hover p {
   width: 70%;
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 @-webkit-keyframes slide {
   0% {
     right: -60px;
@@ -552,6 +556,7 @@ main.containerRestaurant .restaurantName h2 {
     right: 0;
   }
 }
+
 @keyframes slide {
   0% {
     right: -60px;
@@ -560,16 +565,16 @@ main.containerRestaurant .restaurantName h2 {
     right: 0;
   }
 }
-.heart-anim span.heart .card-plate {
+.card-plate {
   margin-top: 20px;
   gap: 12px;
 }
-.heart-anim span.heart .card-plate ul {
+.card-plate ul {
   padding: 2px;
   display: inline;
   list-style: none;
 }
-.heart-anim span.heart .card-plate ul li.listPlats {
+.card-plate ul li.listPlats {
   width: auto;
   list-style-type: none;
   -webkit-box-orient: vertical;
@@ -578,7 +583,8 @@ main.containerRestaurant .restaurantName h2 {
           flex-direction: column;
   gap: 10px;
 }
-.heart-anim span.heart .btn {
+
+.btn {
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -603,23 +609,24 @@ main.containerRestaurant .restaurantName h2 {
   -webkit-box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
           box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
 }
-.heart-anim span.heart .btn:hover {
+.btn:hover {
   cursor: pointer;
   background: linear-gradient(0deg, rgba(233, 130, 130, 0.15) 0%, rgba(224, 217, 217, 0.712) 100%), linear-gradient(201deg, #ac74f1 -5.2%, #f461c8 110.74%);
   -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
-.heart-anim span.heart .fonctionnement {
+
+.fonctionnement {
   padding: 20px;
 }
-.heart-anim span.heart .fonctionnement .box {
+.fonctionnement .box {
   width: 100%;
   margin-bottom: 20px;
 }
-.heart-anim span.heart .fonctionnement .element {
+.fonctionnement .element {
   position: relative;
 }
-.heart-anim span.heart .fonctionnement .element .circle {
+.fonctionnement .element .circle {
   background-color: #9356DC;
   color: #fff;
   position: absolute;
@@ -628,10 +635,10 @@ main.containerRestaurant .restaurantName h2 {
   padding: 5px 10px;
   border-radius: 50px;
 }
-.heart-anim span.heart .fonctionnement h2 {
+.fonctionnement h2 {
   margin-right: 199px;
 }
-.heart-anim span.heart .fonctionnement .selection {
+.fonctionnement .selection {
   width: 100%;
   border-radius: 20px;
   background: #f6f6f6;
@@ -639,10 +646,10 @@ main.containerRestaurant .restaurantName h2 {
   -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.heart-anim span.heart .fonctionnement .selection i {
+.fonctionnement .selection i {
   margin-right: 10px;
 }
-.heart-anim span.heart .fonctionnement a {
+.fonctionnement a {
   color: #000;
   font-family: Roboto;
   font-size: 16px;
@@ -651,7 +658,8 @@ main.containerRestaurant .restaurantName h2 {
   text-decoration: none;
   text-align: center;
 }
-.heart-anim span.heart .title-menu-section {
+
+.title-menu-section {
   color: #000;
   background-color: #F6F6F6;
   font-family: "Roboto";
@@ -662,12 +670,13 @@ main.containerRestaurant .restaurantName h2 {
   text-transform: uppercase;
   border-bottom: 2px solid #99E2D0;
 }
-.heart-anim span.heart .title-menu-section i.fa-regular.fa-heart.fa-lg {
+.title-menu-section i.fa-regular.fa-heart.fa-lg {
   position: absolute;
   right: 20px;
   top: 54px;
 }
-.heart-anim span.heart .restaurants {
+
+.restaurants {
   background-color: #F6F6F6;
   width: 100%;
   display: -webkit-box;
@@ -678,7 +687,7 @@ main.containerRestaurant .restaurantName h2 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.heart-anim span.heart .restaurants h2 {
+.restaurants h2 {
   color: #000;
   font-family: Roboto;
   margin-left: 15px;
@@ -687,17 +696,17 @@ main.containerRestaurant .restaurantName h2 {
   font-weight: 700;
   line-height: normal;
 }
-.heart-anim span.heart .restaurants .cards-container {
+.restaurants .cards-container {
   padding: 15px;
 }
-.heart-anim span.heart .restaurants .cards-container img {
+.restaurants .cards-container img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 231px;
   border-radius: 20px 20px 0 0;
 }
-.heart-anim span.heart .restaurants .cards-container .card {
+.restaurants .cards-container .card {
   background-color: #fff;
   position: relative;
   width: 100%;
@@ -706,27 +715,27 @@ main.containerRestaurant .restaurantName h2 {
   -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.heart-anim span.heart .restaurants .cards-container .card .badge {
+.restaurants .cards-container .card .badge {
   position: absolute;
   background-color: #99E2D0;
   top: 15px;
   right: 15px;
   padding: 5px 10px;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts {
+.restaurants .cards-container .card .cards-texts {
   padding: 1px 21px 9px;
   line-height: 15px;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts .title-restaurant {
+.restaurants .cards-container .card .cards-texts .title-restaurant {
   font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #000000;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts p.citie-restaurant {
+.restaurants .cards-container .card .cards-texts p.citie-restaurant {
   text-align: left;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts .heart-anim span.heart {
+.restaurants .cards-container .card .cards-texts .heart-anim span.heart {
   right: 15px;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
@@ -736,10 +745,35 @@ main.containerRestaurant .restaurantName h2 {
   transition-duration: 1000ms;
   font-size: 22px;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts .heart-anim:hover .anim {
+.restaurants .cards-container .card .cards-texts .heart-anim span.heart {
+  position: absolute;
+  top: 260px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1000ms;
+  transition-duration: 1000ms;
+  font-size: 22px;
+}
+.restaurants .cards-container .card .cards-texts .heart-anim span.heart :hover {
+  opacity: 1;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -5.2%, #ff79da 110.74%));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.restaurants .cards-container .card .cards-texts .heart-anim span.heart span.anim {
+  opacity: 0;
+  background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.restaurants .cards-container .card .heart-anim:hover .anim {
   opacity: 1;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts .heart-anim span.heart {
+.restaurants .cards-container .card .heart-anim:hover span.heart {
   position: absolute;
   bottom: 40px;
   right: 15px;
@@ -751,14 +785,15 @@ main.containerRestaurant .restaurantName h2 {
           transition-duration: 1000ms;
   font-size: 22px;
 }
-.heart-anim span.heart .restaurants .cards-container .card .cards-texts .heart-anim span.anim {
+.restaurants .cards-container .card .heart-anim span.anim {
   opacity: 0;
   background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
-.heart-anim span.heart footer {
+
+footer {
   list-style-type: none;
   background-color: #353535;
   color: #FFF;
@@ -766,36 +801,35 @@ main.containerRestaurant .restaurantName h2 {
   padding: 2px 2px 3px 10px;
   background: #353535;
 }
-.heart-anim span.heart footer .title-footer {
+footer .title-footer {
   font-family: "Shrikhand";
   position: relative;
   margin: 0;
   left: 0px;
 }
-.heart-anim span.heart footer ul {
+footer ul {
   position: relative;
   list-style-type: none;
   text-align: start;
   left: -38px;
 }
+
 @media screen and (min-width: 1024px) {
-  .heart-anim span.heart {
-    /* Section Title */
-  }
-  .heart-anim span.heart header .logo {
+  header .logo {
     color: #101010;
     text-align: center;
     font-size: 37px;
     line-height: 43.74px;
     font-style: italic;
   }
-  .heart-anim span.heart .banner img {
+  .banner img {
     width: 100%;
     height: 560px;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .heart-anim span.heart .headline {
+  /* Section Title */
+  .headline {
     position: relative;
     padding-top: 1px;
     background: var(--Background, #F6F6F6);
@@ -807,23 +841,23 @@ main.containerRestaurant .restaurantName h2 {
     font-weight: 700;
     line-height: normal;
   }
-  .heart-anim span.heart .headline h2 {
+  .headline h2 {
     font-weight: bolder;
     font-size: 40px;
     font-style: normal;
   }
-  .heart-anim span.heart .headline .sub-title {
+  .headline .sub-title {
     font-size: 18px;
     font-weight: bold;
     color: #353535;
     text-align: center;
   }
-  .heart-anim span.heart .headline .button-research {
+  .headline .btn-2 {
     color: var(--White, #fff);
     margin: 76px;
     width: 222px;
     text-align: center;
-    padding: 6px;
+    padding: 16px;
     font-family: "Roboto";
     font-style: normal;
     font-size: 16px;
@@ -836,7 +870,7 @@ main.containerRestaurant .restaurantName h2 {
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
-  .heart-anim span.heart .headline a {
+  .headline a {
     color: #000;
     font-family: "Roboto";
     font-size: 16px;
@@ -847,10 +881,10 @@ main.containerRestaurant .restaurantName h2 {
     cursor: pointer;
     text-align: center;
   }
-  .heart-anim span.heart .heart-anim:hover .anim {
+  .heart-anim:hover .anim {
     opacity: 1;
   }
-  .heart-anim span.heart .heart-anim span.heart {
+  .heart-anim span.heart {
     position: absolute;
     bottom: 40px;
     right: 15px;
@@ -862,14 +896,14 @@ main.containerRestaurant .restaurantName h2 {
             transition-duration: 1000ms;
     font-size: 22px;
   }
-  .heart-anim span.heart .heart-anim span.anim {
+  .heart-anim span.anim {
     opacity: 0;
     background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
   }
-  .heart-anim span.heart .heart-anim span.heart {
+  .heart-anim span.heart {
     position: absolute;
     top: 30px;
     right: 471px;
@@ -882,21 +916,21 @@ main.containerRestaurant .restaurantName h2 {
     transition-duration: 1000ms;
     font-size: 22px;
   }
-  .heart-anim span.heart .fonctionnement {
+  .fonctionnement {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 17px;
   }
-  .heart-anim span.heart .fonctionnement .box {
+  .fonctionnement .box {
     margin: auto;
     width: 100%;
     height: 73px;
   }
-  .heart-anim span.heart .fonctionnement .element {
+  .fonctionnement .element {
     position: relative;
   }
-  .heart-anim span.heart .fonctionnement .element .circle {
+  .fonctionnement .element .circle {
     background-color: #9356DC;
     color: #fff;
     position: absolute;
@@ -905,7 +939,7 @@ main.containerRestaurant .restaurantName h2 {
     padding: 5px 10px;
     border-radius: 50px;
   }
-  .heart-anim span.heart main.containerRestaurant {
+  main.containerRestaurant {
     position: relative;
     background-color: #F6F6F6;
     width: 65%;
@@ -920,7 +954,7 @@ main.containerRestaurant .restaurantName h2 {
     -ms-border-radius: 30.043px 30.043px 0 0;
     -o-border-radius: 30.043px 30.043px 0 0;
   }
-  .heart-anim span.heart main.containerRestaurant .restaurantName h2 {
+  main.containerRestaurant .restaurantName h2 {
     position: relative;
     color: var(--Black, #101010);
     font-family: "Shrikhand";
@@ -930,43 +964,43 @@ main.containerRestaurant .restaurantName h2 {
     font-weight: 400;
     line-height: normal;
   }
-  .heart-anim span.heart main.containerRestaurant .heart-anim span.heart {
+  main.containerRestaurant .heart-anim span.heart {
     position: absolute;
-    top: 34px;
-    left: 550px;
+    top: 32px;
+    left: 657px;
     transition-property: transform, -webkit-transform;
     -webkit-transition-duration: 1000ms;
             transition-duration: 1000ms;
     font-size: 22px;
   }
-  .heart-anim span.heart main.containerRestaurant .heart-anim span.heart :hover {
+  main.containerRestaurant .heart-anim span.heart :hover {
     opacity: 1;
     background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -5.2%, #ff79da 110.74%));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
   }
-  .heart-anim span.heart main.containerRestaurant .heart-anim span.heart :hover span.anim {
+  main.containerRestaurant .heart-anim span.heart :hover span.anim {
     opacity: 0;
     background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
   }
-  .heart-anim span.heart .cards-container {
+  .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-bottom: 50px;
   }
-  .heart-anim span.heart .cards-container .card .badge {
+  .cards-container .card .badge {
     position: absolute;
     background-color: aquamarine;
     top: 15px;
     right: 15px;
     padding: 5px 10px;
   }
-  .heart-anim span.heart .cards-container .cards-texts {
+  .cards-container .cards-texts {
     margin: auto;
     font-family: "Roboto";
     font-size: 18px;
@@ -974,7 +1008,7 @@ main.containerRestaurant .restaurantName h2 {
     line-height: 21.09px;
     text-align: left;
   }
-  .heart-anim span.heart .cards-container .cards-texts .heart-anim span.heart {
+  .cards-container .cards-texts .heart-anim span.heart {
     position: absolute;
     top: 260px;
     -webkit-transition-property: -webkit-transform;
@@ -985,21 +1019,21 @@ main.containerRestaurant .restaurantName h2 {
     transition-duration: 1000ms;
     font-size: 22px;
   }
-  .heart-anim span.heart .cards-container .cards-texts .heart-anim span.heart :hover {
+  .cards-container .cards-texts .heart-anim span.heart :hover {
     opacity: 1;
     background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -5.2%, #ff79da 110.74%));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
   }
-  .heart-anim span.heart .cards-container .cards-texts .heart-anim span.heart span.anim {
+  .cards-container .cards-texts .heart-anim span.heart span.anim {
     opacity: 0;
     background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
   }
-  .heart-anim span.heart .cards-container .btn {
+  .cards-container .btn {
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1011,7 +1045,6 @@ main.containerRestaurant .restaurantName h2 {
     margin-bottom: 129px;
     font-size: 17px;
     font-weight: 400;
-    text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1024,13 +1057,13 @@ main.containerRestaurant .restaurantName h2 {
     -webkit-box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
             box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
   }
-  .heart-anim span.heart .cards-container .btn:hover {
+  .cards-container .btn:hover {
     cursor: pointer;
     background: linear-gradient(0deg, rgba(233, 130, 130, 0.15) 0%, rgba(224, 217, 217, 0.712) 100%), linear-gradient(201deg, #ac74f1 -5.2%, #f461c8 110.74%);
     -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
-  .heart-anim span.heart footer {
+  footer {
     height: 90px;
     list-style-type: none;
     background-color: #353535;
@@ -1046,11 +1079,11 @@ main.containerRestaurant .restaurantName h2 {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .heart-anim span.heart footer .title-footer {
+  footer .title-footer {
     padding-top: 7px;
     left: 54px;
   }
-  .heart-anim span.heart footer ul {
+  footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1059,18 +1092,18 @@ main.containerRestaurant .restaurantName h2 {
     list-style-type: none;
     text-align: start;
   }
-  .heart-anim span.heart footer ul a:hover {
+  footer ul a:hover {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
   }
-  .heart-anim span.heart footer ul i.fa-solid.fa-handshake-angle {
+  footer ul i.fa-solid.fa-handshake-angle {
     margin-right: 2px;
   }
-  .heart-anim span.heart footer ul i.fa-solid.fa-utensils {
+  footer ul i.fa-solid.fa-utensils {
     margin-right: 2px;
   }
-  .heart-anim span.heart i.far.fa-heart {
+  i.far.fa-heart {
     -webkit-font-smoothing: antialiased;
     display: var(--fa-display, inline-block);
     font-style: normal;
@@ -1079,13 +1112,13 @@ main.containerRestaurant .restaurantName h2 {
     text-rendering: auto;
   }
 }
-.heart-anim span.heart .cardsMenuList {
+.cardsMenuList {
   display: block;
   margin: auto;
   max-width: 60%;
   padding-bottom: 0px;
 }
-.heart-anim span.heart .cardsMenuList .cardsMenuList__title {
+.cardsMenuList .cardsMenuList__title {
   color: #000;
   background-color: #F6F6F6;
   font-family: "Roboto";
@@ -1099,12 +1132,12 @@ main.containerRestaurant .restaurantName h2 {
   border-bottom: 1px solid #99E2D0;
   width: 40px;
 }
-.heart-anim span.heart .cardsMenuList ul {
+.cardsMenuList ul {
   padding: 2px;
   display: inline;
   list-style: none;
 }
-.heart-anim span.heart .cardsMenuList ul li.listPlats {
+.cardsMenuList ul li.listPlats {
   width: auto;
   list-style-type: none;
   -webkit-box-orient: vertical;
