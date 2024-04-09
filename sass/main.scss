@@ -245,7 +245,7 @@ main.containerRestaurant {
     position: relative;
     background-color: #F6F6F6;
     width: 100%;
-    height: 1384px;
+    height: 1410px;
     margin: auto;
     margin-top: 21px;
     padding-top: 1px;
@@ -275,10 +275,6 @@ main.containerRestaurant {
     transition-duration: 1000ms;
     font-size: 22px;
 
-
-    :hover {
-        background: linear-gradient(193deg, #9356dc -11.4%, #ff79da 123.93%);
-    }
 }
 
 
@@ -289,8 +285,8 @@ ul.cardsMenuList__content {
 
 h3.cardsMenuList__title {
     position: relative;
-    margin-left: 52px;
-    top: 32px;
+    margin-left: 22px;
+    top: 26px;
     color: #000;
     background-color: #F6F6F6;
     font-family: "Roboto";
@@ -299,8 +295,19 @@ h3.cardsMenuList__title {
     font-weight: 300;
     line-height: normal;
     text-transform: uppercase;
-    border-bottom: 1px solid #99E2D0;
     width: 40px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        bottom: -6px;
+        height: 1px;
+        background: #99E2D0;
+    }
+
 }
 
 // Apparition progressive
@@ -421,10 +428,10 @@ h3.cardsMenuList__title {
     display: block;
     max-width: 67%;
     padding-bottom: 0px;
-    padding-right: 81px;
+    padding-right: 93px;
 
     .card-plate {
-        width: 150%;
+        width: 124%;
         overflow: hidden;
         position: relative;
         margin: 11px;
@@ -436,32 +443,16 @@ h3.cardsMenuList__title {
         box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
     }
 
-    &.cardsMenuList__title {
-        position: relative;
-        margin-left: 28px;
-        top: 32px;
-        color: #000;
-        background-color: #F6F6F6;
-        font-family: "Roboto";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        text-transform: uppercase;
-        border-bottom: 1px solid #99E2D0;
-        width: 40px;
-    }
-
     ul.cardsMenuList__title {
         list-style-type: none;
     }
 
     .card-plate {
-        width: 123%;
+        width: 140%;
         overflow: hidden;
         position: relative;
-        margin: 11px;
-        margin-bottom: 23px;
+        left: -17px;
+        margin-bottom: 34px;
         line-height: normal;
         border-radius: 15px;
         background: #FFF;
@@ -575,7 +566,7 @@ h3.cardsMenuList__title {
     color: #FFF;
     font-family: 'Roboto';
     padding-left: 47px;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 129px;
     font-size: 17px;
     font-weight: 400;
@@ -626,12 +617,17 @@ h3.cardsMenuList__title {
     .selection {
         width: 100%;
         border-radius: 20px;
+        padding: 12px;
         background: #f6f6f6;
         /* Shadow/Instructions */
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
         i {
             margin-right: 10px;
+        }
+
+        &:hover {
+            background: #F5EDFF;
         }
     }
 
@@ -802,8 +798,8 @@ footer {
     list-style-type: none;
     background-color: #353535;
     color: #FFF;
-    top: 28px;
-    padding: 2px 2px 3px 10px;
+    margin-top: 28px;
+    padding: 14px 2px 13px 10px;
     background: #353535;
 
     .title-footer {
@@ -976,7 +972,7 @@ footer {
         position: relative;
         background-color: #F6F6F6;
         width: 65%;
-        height: 1308px;
+        height: 1450px;
         margin: auto;
         padding-top: 1px;
         top: -40px;
@@ -1168,13 +1164,13 @@ footer {
     max-width: 60%;
     padding-bottom: 0px;
 
-    & .cardsMenuList__title {
+    &.cardsMenuList__title {
         color: #000;
         background-color: #F6F6F6;
         font-family: "Roboto";
         font-size: 16px;
         position: relative;
-        margin-left: 26px;
+        margin-left: 8px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
