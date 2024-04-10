@@ -492,6 +492,7 @@ h3.cardsMenuList__title::before {
 .cardsMenuList .card-plate .price {
   position: absolute;
   padding-right: 24px;
+  font-weight: bold;
   right: 5px;
   bottom: 21px;
 }
@@ -938,7 +939,7 @@ footer ul {
     position: relative;
     background-color: #F6F6F6;
     width: 65%;
-    height: 1450px;
+    height: 1376px;
     margin: auto;
     padding-top: 1px;
     top: -40px;
@@ -981,6 +982,20 @@ footer ul {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+  }
+  main.containerRestaurant h3.cardsMenuList__title {
+    position: relative;
+    margin-left: 42px;
+    top: 26px;
+    color: #000;
+    background-color: #F6F6F6;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 40px;
   }
   .cards-container {
     display: grid;
@@ -1058,7 +1073,20 @@ footer ul {
     -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
+  .cardsMenuList .card-plate {
+    width: 106%;
+    overflow: hidden;
+    position: relative;
+    left: 16px;
+    margin-bottom: 34px;
+    line-height: normal;
+    border-radius: 15px;
+    background: #FFF;
+    -webkit-box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  }
   footer {
+    position: relative;
     height: 90px;
     list-style-type: none;
     background-color: #353535;
@@ -1119,7 +1147,8 @@ footer ul {
   font-family: "Roboto";
   font-size: 16px;
   position: relative;
-  margin-left: 8px;
+  margin-left: -10px;
+  top: 26px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
